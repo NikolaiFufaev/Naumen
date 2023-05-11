@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface UserStorage {
 
-    long getUser(String name);
+    Long getUser(String name);
 
-    List<String> getAllStatistic();
+    List<User> getAllStatistic();
 
-    String getMaxAge();
+    User getMaxAge();
 }

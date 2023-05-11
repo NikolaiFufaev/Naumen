@@ -1,8 +1,8 @@
 package ru.fufaev.naumen;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -17,17 +17,17 @@ public class UserController {
     }
 
     @GetMapping
-    public long getUser(@RequestBody String name) {
+    public Long getUser(@RequestParam(required = false) String name) {
         return userStorage.getUser(name);
     }
 
     @GetMapping("/statistic")
-    public List<String> getAllStatistic() {
+    public List<User> getAllStatistic() {
         return userStorage.getAllStatistic();
     }
 
     @GetMapping("/maxAge")
-    public String getMaxAge() {
+    public User getMaxAge() {
         return userStorage.getMaxAge();
     }
 
