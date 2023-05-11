@@ -8,7 +8,6 @@ import {User, UsersService} from "./users.service";
 })
 export class AppComponent {
   title = 'angularclient'
-  error: any
   age: any = null
   current: string = ""
   users: User[] = [];
